@@ -37,7 +37,11 @@ class CursoViewSet(viewsets.ModelViewSet):
 #cd env/    $env: source bin/activate
 #sudo service mysql start <----------------
 #python manage.py runserver 0.0.0.0:8080 <-------------
-
+BASE_URL = 'https://tecsup.instructure.com/api/v1'
+#BASE_URL = 'http://3.88.106.84/api/v1'
+headers = {'Authorization':'Bearer 8184~HbuKQy2rjk8SnjMmdQvdsh5e0WTCu7kXukmypkRFocQP4RwLDISO4gZDnMSCnrnM'} #teachkey
+#headers = {'Authorization':'Bearer 8184~GyiG7Epa5z66YteeNG7pB1s8v0ObCWkydyC2RaUNXOXdkmyCWIjqy7fwnqWqQpS6'} #propio
+#headers = {'Authorization':'Bearer 11maizMixV3gdpW9zChofr7wCqpaKSFLp26OPFYjRqsWNhkrCmFKKuBGuMIIMMen'} #canvasBitnami
 
 def courses(request):
     if request.method == 'GET':
